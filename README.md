@@ -11,13 +11,13 @@ In this course, I learn how to develop and implement REST services, including GE
 ## Course Outline
 
 1. Class 5: How to make a REST request and interpret its results
-    * curl "url"
+    * xkcd.php
 
 2. Class 6: Expose data through HTTP GET
-    - A few examples of how to avoid the Hardcoding practice
+    * server.php
 
 3. Class : ...
-    - ...
+    * ...
 
 ## Conclusion
 
