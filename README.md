@@ -16,7 +16,10 @@ In this course, I learn how to develop and implement REST services, including GE
 2. Class 6: Expose data through HTTP GET
     * server.php
 
-3. Class : ...
+3. Class 7: expose a particular resource via HTTP GET
+    * router.php
+
+4. Class : ...
     * ...
 
 ## Conclusion
