@@ -57,7 +57,13 @@ switch ( strtoupper( $_SERVER['REQUEST_METHOD']) )  {
         break;
 
     case 'PUT':
-        # code...
+        if ( !empty($resourceId) && array_key_exists($resourceId, $books)) {
+            //we take the raw data
+            $json = file_get_contents('php://input');
+            $books[ $resourceId ] = json_decode( $json, true );
+            //echo array_keys($books)[count($books)-1];
+            echo json_encode($books);
+        }
         break;
 
     case 'DELETE':
