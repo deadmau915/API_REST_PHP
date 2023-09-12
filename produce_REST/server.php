@@ -67,6 +67,11 @@ switch ( strtoupper( $_SERVER['REQUEST_METHOD']) )  {
         break;
 
     case 'DELETE':
-        # code...
+        //check the resource's exitence
+        if ( !empty($resourceId) && array_key_exists($resourceId, $books)) {
+            //delete the resource
+            unset( $books[$resourceId] );
+        }
+        echo json_encode( $books );
         break;
 }

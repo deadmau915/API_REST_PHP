@@ -25,7 +25,10 @@ In this course, I learn how to develop and implement REST services, including GE
 5. Class 9: Modify data via HTTP PUT
     * server.php
 
-6. Class : ...
+6. Class 10: Delete data via HTTP DELETE
+    * server.php
+
+7. Class : ...
     * ...
 
 ## Conclusion
