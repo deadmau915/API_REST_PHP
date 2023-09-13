@@ -28,7 +28,10 @@ In this course, I learn how to develop and implement REST services, including GE
 6. Class 10: Delete data via HTTP DELETE
     * server.php
 
-7. Class : ...
+7. Class 11: Authentication via HTTP
+    * server.php
+
+8. Class : ...
     * ...
 
 ## Conclusion
