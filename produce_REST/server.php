@@ -1,5 +1,5 @@
 <?php
-// Authentication via HTTP
+// AUTHENTICATION VIA HTTP
 /* $user = array_key_exists( 'PHP_AUTH_USER', $_SERVER) ? $_SERVER['PHP_AUTH_USER'] : '';
 $pwd = array_key_exists( 'PHP_AUTH_PW', $_SERVER) ? $_SERVER['PHP_AUTH_PW'] : '';
 
@@ -7,7 +7,8 @@ if ( $user !== 'mauro' || $pwd !== '1234' ) {
     die;
 } */
 
-if (
+// AUTHENTICATION VIA HMAC
+/* if (
     !array_key_exists('HTTP_X_HASH', $_SERVER) ||
     !array_key_exists('HTTP_X_TIMESTAMP', $_SERVER) ||
     !array_key_exists('HTTP_X_UID', $_SERVER)
@@ -24,6 +25,32 @@ $secret = 'secreto';
 $newHash = sha1($uid.$timestamp.$secret);
 
 if ($newHash !== $hash) {
+    die;
+} */
+
+// AUTHENTICATION VIA TOKEN
+if ( !array_key_exists( 'HTTP_X_TOKEN', $_SERVER ) ) {
+    die;
+}
+
+$url = 'http://localhost:8001';
+$ch = curl_init( $url );
+curl_setopt(
+    $ch,
+    CURLOPT_HTTPHEADER,
+    [
+        "X-Token: {$_SERVER['HTTP_X_TOKEN']}"
+    ]
+);
+curl_setopt(
+    $ch,
+    CURLOPT_RETURNTRANSFER,
+    true
+);
+
+$ret = curl_exec( $ch );
+
+if ( $ret !== 'true' ) {
     die;
 }
 
