@@ -31,7 +31,12 @@ In this course, I learn how to develop and implement REST services, including GE
 7. Class 11: Authentication via HTTP
     * server.php
 
-8. Class : ...
+8. Class 10: Authentication via HMAC
+    * to use this authentication you must sent the UID, TIMESTAMP and HASH
+    * run generate_hash to obtain the TIMESTAMP and HASH
+    * then use the next command -> curl [url] -H 'X-UID: #' -H 'X-TIMESTAMP: #' -H 'X-HASH: #'
+
+9. Class : ...
     * ...
 
 ## Conclusion
