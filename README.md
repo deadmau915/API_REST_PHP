@@ -41,7 +41,11 @@ In this course, I learn how to develop and implement REST services, including GE
     * then ask for the token using -> curl http://localhost:8001 -X 'GET' -H 'Client-Id: 1' -H 'X-Secret: SuperSecreto!'
     * make the request to the server using the given token -> curl http://localhost:8000 -H 'X-Token: ####'
 
-10. Class : ...
+10. Class 14: REST service error handling
+    * run the API server
+    * ask for a resource to simulate a client -> php client.php http://localhost:8000/books/[resource number]
+
+11. Class : ...
     * ...
 
 ## Conclusion

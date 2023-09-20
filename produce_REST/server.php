@@ -6,6 +6,7 @@ $pwd = array_key_exists( 'PHP_AUTH_PW', $_SERVER) ? $_SERVER['PHP_AUTH_PW'] : ''
 if ( $user !== 'mauro' || $pwd !== '1234' ) {
     die;
 } */
+////////////////////////////
 
 // AUTHENTICATION VIA HMAC
 /* if (
@@ -27,9 +28,10 @@ $newHash = sha1($uid.$timestamp.$secret);
 if ($newHash !== $hash) {
     die;
 } */
+////////////////////////////
 
 // AUTHENTICATION VIA TOKEN
-if ( !array_key_exists( 'HTTP_X_TOKEN', $_SERVER ) ) {
+/* if ( !array_key_exists( 'HTTP_X_TOKEN', $_SERVER ) ) {
     die;
 }
 
@@ -52,7 +54,8 @@ $ret = curl_exec( $ch );
 
 if ( $ret !== 'true' ) {
     die;
-}
+} */
+/////////////////////////////
 
 //available resources
 $allowedResourceTypes = [
@@ -65,6 +68,7 @@ $resourceType = $_GET['resource_type'];
 
 //validate that the resource is available
 if ( !in_array( $resourceType, $allowedResourceTypes ) ) {
+    http_response_code(400);
     die;
 }
 
@@ -100,6 +104,8 @@ switch ( strtoupper( $_SERVER['REQUEST_METHOD']) )  {
         } else {
             if ( array_key_exists($resourceId, $books) ) {
                 echo json_encode( $books[$resourceId] );
+            } else {
+                http_response_code(404);
             }
         }
         break;
