@@ -45,8 +45,9 @@ In this course, I learn how to develop and implement REST services, including GE
     * run the API server
     * ask for a resource to simulate a client -> php client.php http://localhost:8000/books/[resource number]
 
-11. Class 15: AJAX
+11. Class 15, 16: AJAX
     * class 15 - Building the html structure to work with ajax
+    * class 16 - Creating a request via Ajax (GET)
 
 12. Class : ...
     * ...

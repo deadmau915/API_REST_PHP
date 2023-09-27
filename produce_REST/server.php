@@ -75,17 +75,17 @@ if ( !in_array( $resourceType, $allowedResourceTypes ) ) {
 //define the resources
 $books = [
     1 => [
-        'tittle' => 'gone with the wind',
+        'title' => 'gone with the wind',
         'id_author' => 2,
         'id_genre' => 2
     ],
     2 => [
-        'tittle' => 'the Iliad',
+        'title' => 'the Iliad',
         'id_author' => 1,
         'id_genre' => 1
     ],
     3 => [
-        'tittle' => 'the odyssey',
+        'title' => 'the odyssey',
         'id_author' => 1,
         'id_genre' => 1
     ],
